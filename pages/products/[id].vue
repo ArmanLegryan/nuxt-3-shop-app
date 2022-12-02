@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Product with id: {{ id }}</h1>
+    <p>{{ product.title }}</p>
+    <p>{{ product.price }}</p>
+    <p>{{ product.id }}</p>
   </div>
 </template>
 
@@ -8,10 +10,11 @@
 definePageMeta({
   layout: "products"
 });
-
 const route = useRoute();
-
 const id = route.params.id;
+const url = `https://fakestoreapi.com/products/${id}`;
+
+const { data: product } = await useFetch(url, { key: id });
 </script>
 
 <style scoped></style>

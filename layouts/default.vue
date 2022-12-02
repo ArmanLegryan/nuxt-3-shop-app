@@ -2,16 +2,12 @@
   <div>
     <heade class="shadow-sm bg-white">
       <nav class="container mx-auto p-4 flex justify-between">
-        <NuxtLink :to="{ path: '/' }" class="font-bold">Nuxt Dojo</NuxtLink>
+        <NuxtLink to="/" class="font-bold">Nuxt Dojo</NuxtLink>
         <ul class="flex gap-4">
+          <li><NuxtLink to="/">Home</NuxtLink></li>
+          <li><NuxtLink :to="{ name: 'about' }">About</NuxtLink></li>
           <li>
-            <NuxtLink :to="{ path: '/' }">Home</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink :to="{ path: '/about' }">About</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink :to="{ path: '/products' }" class="btn">
+            <NuxtLink :to="{ name: 'products' }" class="btn">
               Products
             </NuxtLink>
           </li>
