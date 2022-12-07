@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-const { data } = await useFetch("/api/ninja");
+const { data } = await useFetch("/api/user/5");
 </script>
 
 <style scoped>
