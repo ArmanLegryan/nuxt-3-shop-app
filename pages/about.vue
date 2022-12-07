@@ -11,10 +11,16 @@
       voluptate mollitia ex excepturi doloribus error suscipit eveniet
       recusandae.
     </p>
+
+    <div>
+      <pre>{{ data }}</pre>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch("/api/ninja");
+</script>
 
 <style scoped>
 h2 {
